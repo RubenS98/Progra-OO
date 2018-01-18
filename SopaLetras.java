@@ -1,7 +1,12 @@
+/*
+Ruben Sanchez
+A01021759
+Programacion Orientada a Objetos
+*/
 import java.util.Scanner;
 public class SopaLetras {
     public static void main (String[] args){
-        String [][] bi = {{"M", "R", "D", "F", "O"},{"A", "R", "N", "T", "L"},{"N","O", "N", "A", "M"},
+        String [][] bi = {{"M", "R", "D", "F", "O"},{"A", "Y", "N", "T", "L"},{"N","O", "N", "A", "M"},
             {"O", "S", "D", "Y", "D"},{"J", "G", "H", "H", "L"}};
         Scanner lectura = new Scanner(System.in);
         String palabra="";
