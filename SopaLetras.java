@@ -6,8 +6,8 @@ Programacion Orientada a Objetos
 import java.util.Scanner;
 public class SopaLetras {
     public static void main (String[] args){
-        String [][] bi = {{"M", "R", "D", "F", "O"},{"A", "Y", "N", "T", "L"},{"N","O", "N", "A", "M"},
-            {"O", "S", "D", "Y", "D"},{"J", "G", "H", "H", "L"}};
+        String [][] bi = {{"M", "R", "D", "F"},{"A", "Y", "N", "T"},{"N","O", "N", "A"},
+            {"O", "S", "D", "Y"},{"J", "G", "H", "H"}};
         Scanner lectura = new Scanner(System.in);
         String palabra="";
         int repeticiones=0;
