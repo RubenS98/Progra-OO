@@ -19,7 +19,7 @@ public class CanguroTest {
         can2.setPosicion(lectura.nextInt());
         can2.setVelocidad(lectura.nextInt());
 
-        conclusion=can1.comparacion(can2.getPosicion(), can2.getVelocidad());
+        conclusion=can1.comparacion(can2);
 
         System.out.println(conclusion);
     }

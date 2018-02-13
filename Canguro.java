@@ -19,23 +19,23 @@ public class Canguro {
     public int getVelocidad(){
         return velocidad;
     }
-    public String comparacion(int posicion2, int velocidad2){
+    public String comparacion(Canguro can){
         boolean valido=false;
 
-        if(posicion>posicion2 && velocidad>=velocidad2){
+        if(posicion>can.posicion && velocidad>=can.velocidad){
 
            return "No";
         }
-        else if (posicion2>posicion && velocidad2>=velocidad){
+        else if (can.posicion>posicion && can.velocidad>=velocidad){
 
            return "No";
         }
-        else if(posicion2>posicion){
-           while(posicion2>posicion && valido==false){
-               posicion2+=velocidad2;
+        else if(can.posicion>posicion){
+           while(can.posicion>posicion && valido==false){
+               can.posicion+=can.velocidad;
                posicion+=velocidad;
 
-               if(posicion2==posicion){
+               if(can.posicion==posicion){
                    valido=true;
                }
            }//cierre while
@@ -47,12 +47,12 @@ public class Canguro {
            }
 
         }
-        else if(posicion>posicion2){
-            while(posicion>posicion2 && valido==false){
-               posicion2+=velocidad2;
+        else if(posicion>can.posicion){
+            while(posicion>can.posicion && valido==false){
+               can.posicion+=can.velocidad;
                posicion+=velocidad;
 
-               if(posicion2==posicion){
+               if(can.posicion==posicion){
                    valido=true;
                }
            }//cierre while

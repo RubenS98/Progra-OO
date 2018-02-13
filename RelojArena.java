@@ -1,19 +1,16 @@
-package javaapplication1;
-
-
 public class RelojArena {
     public static void main (String[] args){
         int [][] bi = {{1, 2, 3, 4, 5},{1, 2, 3, 4, 5},{1, 2, 3, 4, 5},{1, 2, 3, 4, 5},{1, 2, 3, 4, 5}};
         for(int r=0; r<bi.length; r++){
             for(int c=0; c<(bi[0].length); c++){
-                System.out.print(bi[r][c]+" ");      
+                System.out.print(bi[r][c]+" ");
             }
-            System.out.println(); 
+            System.out.println();
         }
         System.out.println();
         System.out.println(highest(bi));
     }//cierre de main
-    
+
     public static int highest (int[][] bi){
         int highest=0;
         int sum=0;
@@ -30,7 +27,7 @@ public class RelojArena {
                     }
                     System.out.println(sum);
                 }
-                
+
                 sum=0;
             }
         }
