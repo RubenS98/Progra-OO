@@ -14,7 +14,9 @@ public enum Tarjeta {
   private final double min;
   private final double max;
 
-  Tarjeta(double ingresoMin, double anualidad, double min, double max) {
+  private static final int corte=28;
+
+  private Tarjeta(double ingresoMin, double anualidad, double min, double max) {
       this.ingresoMin = ingresoMin;
       this.anualidad = anualidad;
       this.min = min;
@@ -35,6 +37,6 @@ public enum Tarjeta {
       return interesTIIE() + (max-min);
   }
   public double interesTIIE() {
-      return (28.0*100.0)/360.0;
+      return (corte*100.0)/360.0;
   }
 }

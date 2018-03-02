@@ -10,8 +10,11 @@ public class Cliente {
     private int edad;
     private TarjetaCredito tc;
 
-    public Cliente(int id, String nombre, String apellido, int edad){
-        this.id=id;
+    private static int count=0;
+
+    public Cliente(String nombre, String apellido, int edad){
+        count++;
+        this.id=count;
         this.nombre=nombre;
         this. apellido=apellido;
         this.edad=edad;

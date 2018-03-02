@@ -35,10 +35,30 @@ public class TarjetaCredito {
         }
     }
 
+    public void printTipo(){
+      switch(t){
+        case CLASICA:
+        System.out.println("Tipo de tarjeta: CLASICA");
+        break;
+        case ORO:
+        System.out.println("Tipo de tarjeta: ORO");
+        break;
+        case PLATINUM:
+        System.out.println("Tipo de tarjeta: PLATINUM");
+        break;
+        case BLACK:
+        System.out.println("Tipo de tarjeta: BLACK");
+        break;
+        default:
+        System.out.println("No existe.");
+        break;
+      }
+    }
+
     public void printTC(){
         System.out.printf("Tarjeta de Credito: %s\nSaldo:%.2f\n", numero, saldo);
         System.out.printf("Fecha de Expiracion: %s\nFecha de Expedicion:%s\n", fechaExpiracion.FormatoFecha(), fechaExpedicion.FormatoFecha());
-        if(t.getAnualidad()==699){
+        /*if(t.getAnualidad()==699){
           System.out.println("Tipo de Tarjeta: Clasica");
         }
         else if(t.getAnualidad()==959){
@@ -49,7 +69,8 @@ public class TarjetaCredito {
         }
         else{
           System.out.println("Tipo de Tarjeta: Black");
-        }
+        }*/
+        printTipo();
         System.out.printf("Ingreso Minimo: %.2f\nAnualidad:%.2f\n", t.getIngreso(), t.getAnualidad());
         System.out.printf("TIEE: %.2f\nTIA: %.2f\nTIM: %.2f\n", t.interesTIIE(), t.interesAnual(), t.interesMensual());
     }
