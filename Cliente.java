@@ -1,3 +1,8 @@
+/*
+Ruben Sanchez
+A01021759
+Programacion Orientada a Objetos
+*/
 public class Cliente {
     private int id;
     private String nombre;

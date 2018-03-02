@@ -1,3 +1,8 @@
+/*
+Ruben Sanchez
+A01021759
+Programacion Orientada a Objetos
+*/
 public enum Tarjeta {
   CLASICA(7500.0, 699.0, 29.0, 47.0),
   ORO(15000, 959.0, 25.0, 45.0),

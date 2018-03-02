@@ -1,3 +1,8 @@
+/*
+Ruben Sanchez
+A01021759
+Programacion Orientada a Objetos
+*/
 public class TarjetaCredito {
     private String numero;
     private double saldo;
@@ -33,6 +38,18 @@ public class TarjetaCredito {
     public void printTC(){
         System.out.printf("Tarjeta de Credito: %s\nSaldo:%.2f\n", numero, saldo);
         System.out.printf("Fecha de Expiracion: %s\nFecha de Expedicion:%s\n", fechaExpiracion.FormatoFecha(), fechaExpedicion.FormatoFecha());
+        if(t.getAnualidad()==699){
+          System.out.println("Tipo de Tarjeta: Clasica");
+        }
+        else if(t.getAnualidad()==959){
+          System.out.println("Tipo de Tarjeta: Oro");
+        }
+        else if(t.getAnualidad()==1999){
+          System.out.println("Tipo de Tarjeta: Platinum");
+        }
+        else{
+          System.out.println("Tipo de Tarjeta: Black");
+        }
         System.out.printf("Ingreso Minimo: %.2f\nAnualidad:%.2f\n", t.getIngreso(), t.getAnualidad());
         System.out.printf("TIEE: %.2f\nTIA: %.2f\nTIM: %.2f\n", t.interesTIIE(), t.interesAnual(), t.interesMensual());
     }

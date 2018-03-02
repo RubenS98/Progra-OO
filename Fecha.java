@@ -1,3 +1,8 @@
+/*
+Ruben Sanchez
+A01021759
+Programacion Orientada a Objetos
+*/
 public class Fecha {
     private int dia;
     private int mes;
