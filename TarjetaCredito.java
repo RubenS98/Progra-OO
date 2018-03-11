@@ -10,7 +10,19 @@ public class TarjetaCredito {
     private Fecha fechaExpedicion;
     private Tarjeta t;
 
+    public TarjetaCredito(){
+
+    }
+
     public TarjetaCredito(String numero, double saldo, int diaexpe, int mesexpe, int anioexpe, int diaexpi, int mesexpi, int anioexpi, Tarjeta t){
+        this.numero=numero;
+        this.saldo=saldo;
+        fechaExpiracion=new Fecha(diaexpi, mesexpi, anioexpi);
+        fechaExpedicion=new Fecha(diaexpe, mesexpe, anioexpe);
+        this.t=t;
+    }
+
+    public TarjetaCredito(String numero, double saldo, int diaexpe, int mesexpe, int anioexpe, int diaexpi, int mesexpi, int anioexpi){
         this.numero=numero;
         this.saldo=saldo;
         fechaExpiracion=new Fecha(diaexpi, mesexpi, anioexpi);
@@ -36,23 +48,9 @@ public class TarjetaCredito {
     }
 
     public void printTipo(){
-      switch(t){
-        case CLASICA:
-        System.out.println("Tipo de tarjeta: CLASICA");
-        break;
-        case ORO:
-        System.out.println("Tipo de tarjeta: ORO");
-        break;
-        case PLATINUM:
-        System.out.println("Tipo de tarjeta: PLATINUM");
-        break;
-        case BLACK:
-        System.out.println("Tipo de tarjeta: BLACK");
-        break;
-        default:
-        System.out.println("No existe.");
-        break;
-      }
+     System.out.println("Tipo de tarjeta: "+t);
+     System.out.printf("Ingreso Minimo: %.2f\nAnualidad: %.2f\n", t.getIngreso(), t.getAnualidad());
+     System.out.printf("TIEE: %.2f\nTIA: %.2f\nTIM: %.2f\n", t.interesTIIE(), t.interesAnual(), t.interesMensual());
     }
 
     public void printTC(){
@@ -71,7 +69,5 @@ public class TarjetaCredito {
           System.out.println("Tipo de Tarjeta: Black");
         }*/
         printTipo();
-        System.out.printf("Ingreso Minimo: %.2f\nAnualidad:%.2f\n", t.getIngreso(), t.getAnualidad());
-        System.out.printf("TIEE: %.2f\nTIA: %.2f\nTIM: %.2f\n", t.interesTIIE(), t.interesAnual(), t.interesMensual());
     }
 }
