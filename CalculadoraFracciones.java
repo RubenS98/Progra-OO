@@ -15,15 +15,15 @@ public class CalculadoraFracciones{
 
       do{
           System.out.println("Escriba el numero correspondiente a la opcion que quiera elegir.");
-          System.out.println("\t1-Imprimir fraccion.");
-          System.out.println("\t2-Simplificar fraccion.");
-          System.out.println("\t3-Sumar fracciones.");
-          System.out.println("\t4-Restar fracciones.");
-          System.out.println("\t5-Multiplicar fracciones.");
-          System.out.println("\t6-Dividir fracciones.");
-          System.out.println("\t7-Calcular fraccion.");
-          System.out.println("\t8-Comparar fracciones.");
-          System.out.println("\t9-Salir.");
+          System.out.println("\t1-Imprimir fraccion");
+          System.out.println("\t2-Simplificar fraccion");
+          System.out.println("\t3-Sumar fracciones");
+          System.out.println("\t4-Restar fracciones");
+          System.out.println("\t5-Multiplicar fracciones");
+          System.out.println("\t6-Dividir fracciones");
+          System.out.println("\t7-Calcular fraccion");
+          System.out.println("\t8-Comparar fracciones");
+          System.out.println("\t9-Salir");
           opcion=lectura.nextInt();
           System.out.println();
           switch(opcion){
