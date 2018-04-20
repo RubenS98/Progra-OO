@@ -4,8 +4,8 @@ A01021759
 Programacion Orientada a Objetos
 */
 public class Punto{
-  private double x;
-  private double y;
+  protected double x;
+  protected double y;
 
   public Punto(double x, double y){
       this.x=x;
@@ -18,21 +18,12 @@ public class Punto{
   public void setY(double y){
       this.y=y;
   }
-  public double getX(){
-      return x;
-  }
-  public double getY(){
-      return y;
+
+  public String toString(){
+    String texto="";
+    texto+="("+x+","+y+")";
+
+    return texto;
   }
 
-  public double distancia(Punto coor){
-      double distance=0;
-      double disx=0;
-      double disy=0;
-      disx = x - coor.x;
-      disy = y - coor.y;
-      distance=Math.sqrt((disx*disx)+(disy*disy));
-
-      return distance;
-  }
 }

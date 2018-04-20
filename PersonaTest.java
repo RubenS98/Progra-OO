@@ -1,7 +1,7 @@
 public class PersonaTest {
     public static void main(String[] args) {
-        Persona cliente1 = new Persona();
-        Persona cliente2 = new Persona("Marcela");
+        Persona1 cliente1 = new Persona1();
+        Persona1 cliente2 = new Persona1("Marcela");
 
         cliente2.printPersona();
 

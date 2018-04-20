@@ -1,55 +1,70 @@
-public class Persona {
 
-    private String nombre;
-    private String apellido;
-    private int edad;
-    private String alias;
+/*
+Ruben Sanchez
+A01021759
+Programacion Orientada a Objetos
+*/
+public class Persona{
+  private String nombre;
+  private Direccion d;
+  private Fecha f;
 
-    public Persona(){
-        nombre="Generico";
-        apellido="Generico";
-        edad=20;
-        alias="Sr";
-    }
+  public Persona(String nombre, int dia, int mes, int anio){
+    this.nombre=nombre;
+    this.f=new Fecha(dia, mes, anio);
+  }
 
-    public Persona(String nombre){
-        this.nombre=nombre;
-        this.apellido="Cualquiera";
-    }
+  public void setDireccion(Direccion d){
+    this.d=d;
+  }
 
-    public Persona(String nombre, String apellido, int edad, String alias){
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.edad=edad;
-        this.alias=alias;
-    }
+  public void setNombre(String nombre){
+    this.nombre=nombre;
+  }
+  public String getNombre(){
+    return nombre;
+  }
+  public Direccion getDireccion(){
+    return d;
+  }
+  /*public void setFecha(Fecha f){
+    this.f=f;
+  }
+  */
+  public Fecha getFecha(){
+    return f;
+  }
 
-    public void setNombre(String nombre){
-        this.nombre=nombre;
+  public boolean esMayorDeEdad(Fecha f1){
+    if((f1.getAnio()-f.getAnio())>18){
+      return true;
     }
-    public void setApellido(String apellido){
-        this.apellido=apellido;
+    else if((f1.getAnio()-f.getAnio())==18){
+      if(f.getMes()<f1.getMes()){
+        return true;
+      }
+      else if(f.getMes()==f1.getMes()){
+        if(f.getDia()<=f1.getDia()){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+      else{
+        return false;
+      }
     }
-    public void setEdad(int edad){
-        this.edad=edad;
+    else{
+      return false;
     }
-    public void setAlias(String alias){
-        this.alias=alias;
-    }
-    public String getNombre(){
-        return nombre;
-    }
-    public String getApellido(){
-        return apellido;
-    }
-    public int getEdad(){
-        return edad;
-    }
-    public String getAlias(){
-        return alias;
-    }
-    public void printPersona(){
-        System.out.println("Persona: "+alias+". "+nombre+" "+apellido);
-        System.out.println("Edad: "+edad);
-    }
+  }
+  public String toString(){
+    String texto="";
+    texto+="Nombre: "+nombre+"\n";
+    texto+="Fecha Nacimiento: "+f.getDia()+"-"+f.getMes()+"-"+f.getAnio()+"\n";
+    texto+="Direccion: Calle "+d.getCalle()+" No. "+d.getNumero()+", "+d.getCodigo()+", "+d.getCiudad();
+
+    return texto;
+  }
 }
